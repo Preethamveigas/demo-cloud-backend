@@ -4,5 +4,5 @@ COPY package.json /home/niveus/done/
 RUN npm install && npm install express && npm install path
 COPY . /home/niveus/done/
 RUN npm run build
-CMD node index.js
-EXPOSE 8081
+CMD node server.js
+EXPOSE 8080
