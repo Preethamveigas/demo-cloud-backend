@@ -1,8 +1,8 @@
 FROM node:8
-WORKDIR /home/niveus/blog
-COPY package.json /home/niveus/blog/
+WORKDIR /home/niveus/done
+COPY package.json /home/niveus/done/
 RUN npm install && npm install express && npm install path
-COPY . /home/niveus/blog/
+COPY . /home/niveus/done/
 RUN npm run build
 CMD node index.js
 EXPOSE 8081
