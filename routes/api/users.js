@@ -54,8 +54,12 @@ router.get("/", (req, res) => {
 })
 router.get("/login/:id", (req, res) => {
   const id = req.params.id;
+    console.log("-----id------");
+    console.log(id)
   User.find()
     .then(usr => {
+    console.log("-----users------");
+    console.log(usr)
       if ((Object.keys(usr).length) >= 1) {
         if (String(id) === String(0)) {
           return res.status(200).json(usr[0])
