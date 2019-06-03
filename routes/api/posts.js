@@ -21,6 +21,7 @@ router.post("/add", (req, res) => {
   const newPost = new Post({
     text: req.body.text,
     name: req.body.name,
+    title:req.body.title,
     avatar: req.body.avatar,
     user: req.body.id
   });
